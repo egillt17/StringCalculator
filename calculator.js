@@ -17,6 +17,7 @@ function add (numbers){
     
         return sum(numberArray);
     }
+    
     else{
         return parseInt(numbers);
     }
