@@ -8,7 +8,7 @@ function add (numbers){
     {
         var numberArray = numbers.split(/[,\n]/);
         
-        negative(numberArray);
+        negative(numbereArray);
     }
 
     if(numbers.includes(",") || numbers.includes("\n"))
@@ -26,7 +26,9 @@ function sum(numberArray){
     var total = 0;
 
         for(var i = 0; i < numberArray.length; i++){
-            total += parseInt(numberArray[i]);
+            if(numberArray[i] <= 1000) {
+                total += parseInt(numberArray[i]);
+            }
         }
         return total;
 }
