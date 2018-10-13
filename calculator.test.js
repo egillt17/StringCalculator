@@ -13,5 +13,9 @@ it("should return the sum of two given numbers", () => {
 });
 
 it("should sumerize multiple numbers", () => {
-    expect(add("1,2,3")).toBe(6);
+    expect(add("1,2,3,2")).toBe(8);
+});
+
+it("should allow new lines between numbers", () => {
+    expect(add("1 \n 2 , 3")).toBe(6);
 });
