@@ -6,17 +6,21 @@ function add (numbers){
     if(numbers.includes(","))
     {
         var numberArray = numbers.split(",");
+        
+        return sum(numberArray);
+    }
+    else{
+        return parseInt(numbers);
+    }
+}
 
-        var total = 0;
+function sum(numberArray){
+    var total = 0;
 
         for(var i = 0; i < numberArray.length; i++){
             total += parseInt(numberArray[i]);
         }
         return total;
-    }
-    else{
-        return parseInt(numbers);
-    }
 }
 
 module.exports = add;
