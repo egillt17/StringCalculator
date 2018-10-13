@@ -1,12 +1,12 @@
 function add (numbers){
     if(numbers == "")
-
-        return 0;
-
-    if(numbers.includes("," || "\n"))
     {
-        var numberArray = numbers.split(/[\n,]/);
-        
+        return 0;
+    }
+    if(numbers.includes(",") || numbers.includes("\n"))
+    {
+        var numberArray = numbers.split(/[,\n]/);
+    
         return sum(numberArray);
     }
     else{

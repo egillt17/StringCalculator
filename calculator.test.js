@@ -17,5 +17,5 @@ it("should sumerize multiple numbers", () => {
 });
 
 it("should allow new lines between numbers", () => {
-    expect(add("1 \n 2 , 3")).toBe(6);
+    expect(add("2, 1 \n 2")).toBe(5);
 });
