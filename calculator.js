@@ -7,16 +7,8 @@ function add (numbers){
     if(numbers.includes("-"))
     {
         var numberArray = numbers.split(/[,\n]/);
-        var counter = 0;
-        var negativeNumbers = [];
-        for(var i = 0; i < numberArray.length; i++){
-            if(numberArray[i] < 0)
-            {
-                negativeNumbers[counter] = numberArray[i];
-                counter++;
-            }
-        }
-        throw new Error("Negatives not allowed: " + negativeNumbers);
+        
+        negative(numberArray);
     }
 
     if(numbers.includes(",") || numbers.includes("\n"))
@@ -37,6 +29,19 @@ function sum(numberArray){
             total += parseInt(numberArray[i]);
         }
         return total;
+}
+
+function negative(numberArray){
+    var counter = 0;
+        var negativeNumbers = [];
+        for(var i = 0; i < numberArray.length; i++){
+            if(numberArray[i] < 0)
+            {
+                negativeNumbers[counter] = numberArray[i];
+                counter++;
+            }
+        }
+        throw new Error("Negatives not allowed: " + negativeNumbers);
 }
 
 module.exports = add;
