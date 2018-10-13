@@ -19,3 +19,7 @@ it("should sumerize multiple numbers", () => {
 it("should allow new lines between numbers", () => {
     expect(add("2, 1 \n 2")).toBe(5);
 });
+
+it("should throw an exception 'negatives not allowed: ", () => {
+    expect(add("-1, -3, 2")).toThrow("Negatives not allowed: -1, 3");
+});
